@@ -40,7 +40,7 @@ string choice;
 DisplayMenu();
 choice = System.Console.ReadLine();
 
-while (choice != "4")
+while (choice != "3")
 {
     switch (choice)
     {
@@ -50,25 +50,31 @@ while (choice != "4")
         case "2":
             GetPartial();
             break;
-        case "3":
-            ExitMenu();
-            break;
         default:
         {
             System.Console.WriteLine("Invalid entry. Please reenter choice:");
-            Console.Clear();
             DisplayMenu();
             break;
         }
     }
 
-System.Console.WriteLine("Press any key to continue...");
-System.Console.ReadKey();
+    System.Console.WriteLine("Press any key to continue...");
+    System.Console.ReadKey();
         Console.Clear();
         DisplayMenu();
         choice = System.Console.ReadLine();
+      
+    
 
 }
+   System.Console.WriteLine("Invalid entry. Please reenter choice:");
+            
+            DisplayMenu();
+// System.Console.WriteLine("Invalid entry. Please reenter choice:");
+// System.Console.ReadKey();
+//         Console.Clear();
+//         DisplayMenu();
+         choice = System.Console.ReadLine();
 
 
 static void DisplayMenu()
@@ -80,7 +86,7 @@ static void DisplayMenu()
 
     System.Console.WriteLine("Enter Choice:");
 }
-//end main????
+
 
 static void GetFull()
 {
@@ -93,13 +99,12 @@ int ran = new Random().Next(3,10);
         }
             System.Console.WriteLine();
         
-        // System.Console.Write("\n" + i + "\t");
-        // for(int j=0; j<10; j++);
+        
     }
 }
 
 
-//var rNum = random.Next();
+
 static void GetPartial()
 {
     int ran = new Random().Next(3,10);
